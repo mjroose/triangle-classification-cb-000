@@ -4,8 +4,8 @@ class Triangle
   end
 
   def kind
-    
-      
+
+
   end
 
   def valid?
@@ -18,7 +18,7 @@ class Triangle
     valid = valid && @sides[0] + @sides[2] > @sides[1]
     valid
   end
-  
+
   class TriangleError < StandardError
 
   end
