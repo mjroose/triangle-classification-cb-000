@@ -9,7 +9,7 @@ class Triangle
   def kind
     kind_of_triangle = nil
     unique_sides = @sides.uniq.count
-    
+
     case unique_sides
     when 1
       kind_of_triangle = :equilateral
