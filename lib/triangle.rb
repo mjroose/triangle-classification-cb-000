@@ -1,11 +1,24 @@
 class Triangle
   def initialize(s1, s2, s3)
     @sides = [s1, s2, s3]
+    if !self.valid?
+      raise TriangleError
+    end
   end
 
   def kind
-
-
+    kind_of_triangle = nil
+    unique_sides = @sides.uniq.count
+    
+    case unique_sides
+    when 1
+      kind_of_triangle = :equilateral
+    when 2
+      kind_of_triangle = :isosceles
+    when 3
+      kind_of_triangle = :scalene
+    end
+    kind_of_triangle
   end
 
   def valid?
